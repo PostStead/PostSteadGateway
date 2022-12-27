@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.poststead</groupId>
-    <artifactId>PostSteadGateway</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>poststeadgateway</artifactId>
+    <version>1.0.0</version>
     <name>PostSteadGateway</name>
     <description>PostSteadGateway</description>
     <properties>
