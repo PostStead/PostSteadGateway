@@ -1,21 +1,8 @@
 spring:
   application:
-    name: poststead-gateway-service
-  cloud:
-    gateway:
-      routes:
-        - id: postSteadUsers
-          uri: http://localhost:8081
-          predicates:
-            - Path=/api/users/**
-        - id: postSteadPosts
-          uri: http://localhost:8082
-          predicates:
-            - Path=/api/posts/**
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
-      fail-on-empty-beans: false
+    name: poststeadgateway
+  profiles:
+    active: path
 
 server:
   port: 8080

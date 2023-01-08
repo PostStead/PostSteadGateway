@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        - id: userservice
+          uri: http://userservice:8081
+          predicates:
+            - Path=/api/users/**
+        - id: postservice
+          uri: http://postservice:8082
+          predicates:
+            - Path=/api/posts/**
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      fail-on-empty-beans: false
