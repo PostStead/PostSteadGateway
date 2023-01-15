@@ -6,12 +6,19 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "http://poststeadfrontend:4200"
+            allowed-headers: "*"
             allowedMethods:
               - GET
               - POST
               - PUT
               - DELETE
+      httpserver:
+        wiretap: false
+      httpclient:
+        wiretap: false
+        connect-timeout: 300000
+        response-timeout: 10000s
       routes:
         - id: userservice
           uri: http://userservice:8081
